@@ -1,5 +1,5 @@
 module Mollie
-  module API
+  module ResellerAPI
     module Object
       class List < Base
         include Enumerable
@@ -7,21 +7,21 @@ module Mollie
         attr_accessor :totalCount,
                       :offset,
                       :count,
-                      :data
+                      :items
 
         def initialize(hash, classResourceObject)
-          data        = hash[:data] || []
-          hash[:data] = nil
+          items        = hash[:items] || []
+          hash[:items] = nil
           super hash
 
-          @data = []
-          data.each { |hash|
-            @data << (classResourceObject.new hash)
+          @items = []
+          items.each { |hash|
+            @items << (classResourceObject.new hash)
           }
         end
 
         def each(&block)
-          @data.each { |object|
+          @items.each { |object|
             if block_given?
               block.call object
             else

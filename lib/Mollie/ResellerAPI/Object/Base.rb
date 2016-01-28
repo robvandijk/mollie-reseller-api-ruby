@@ -1,5 +1,5 @@
 module Mollie
-  module API
+  module ResellerAPI
     module Object
       class Base
         def initialize(hash)
