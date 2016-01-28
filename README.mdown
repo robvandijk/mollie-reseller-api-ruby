@@ -27,14 +27,14 @@ Initializing the Mollie Reseller API client, and setting your API key, PartnerId
 ```ruby
 		mollie = Mollie::ResellerAPI::Client.new
 		mollie.setApiKey "test_dHar4XY7LxsDOtmnkVtjNVWXLSlXsM"
-    mollie.setPartnerId "1234567"
-    mollie.setProfileKey "EG801C4C"
-    mollie.setProfileSecret "961e2711bd7136506ab74f0993cc73510afa9ddb"
+		mollie.setPartnerId "1234567"
+		mollie.setProfileKey "EG801C4C"
+		mollie.setProfileSecret "961e2711bd7136506ab74f0993cc73510afa9ddb"
 ```
 
 Get available payment methods.
 
 ```ruby
-    partner_id_customer = "7654321"
+		partner_id_customer = "7654321"
 		available_payment_methods = mollie.accounts.available_payment_methods partner_id_customer
 ```
