@@ -29,7 +29,6 @@ module Mollie
 
         @api_location    = API_LOCATION
         @api_endpoint    = API_ENDPOINT
-        @api_key         = ""
         @partner_id      = ""
         @profile_key     = ""
         @profile_secret  = ""
@@ -54,10 +53,6 @@ module Mollie
 
       def getApiEndpoint
         @api_endpoint
-      end
-
-      def setApiKey(api_key)
-        @api_key = api_key
       end
 
       def setPartnerId(partner_id)
@@ -86,7 +81,6 @@ module Mollie
       def performHttpCall(http_method, api_method, id = nil, http_body = nil)
         request_headers = {
           :accept => :xml,
-          :authorization => "Bearer #{@api_key}",
           :user_agent => @version_strings.join(" "),
           "X-Mollie-Reseller-Client-Info" => getUname
         }
