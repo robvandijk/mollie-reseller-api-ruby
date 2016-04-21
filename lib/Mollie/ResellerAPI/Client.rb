@@ -133,6 +133,7 @@ module Mollie
       end
 
       def xml_to_hash(xml)
+        return {} if xml.blank?
         doc = xml.is_a?(String) ? Nokogiri::XML(xml) : xml
         response = {}
         parent = doc.respond_to?(:root) ? doc.root : doc
