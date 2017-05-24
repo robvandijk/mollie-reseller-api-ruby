@@ -11,11 +11,11 @@ spec = Gem::Specification.new do |s|
   s.email = ['info@schoudercom.nl']
   s.homepage = 'https://github.com/robvandijk/mollie-reseller-api-ruby'
   s.license = 'BSD'
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.4.0'
 
-  s.add_dependency('rest-client', '~> 1.8')
-  s.add_dependency('json', '~> 1.8')
-  s.add_dependency('nokogiri', '~> 1.6')
+  s.add_dependency('rest-client', '~> 2.0')
+  s.add_dependency('json', '~> 2.1')
+  s.add_dependency('nokogiri', '~> 1.7')
 
   s.files = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- test/*`.split("\n")
